@@ -1,0 +1,35 @@
+.video-slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 160px 0;
+  position: relative;
+  zoom: 100%;
+}
+
+.video-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+.flight-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  z-index: 1;
+  width: 50%;
+  height: auto;
+}
+.video-slider {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.video-slider.slide-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+

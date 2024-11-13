@@ -1,0 +1,91 @@
+.slider-container {
+    max-width: 100%;
+    margin: 0 auto; 
+    padding: 20px;
+    position: relative;
+}
+
+.slide {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    text-align: center; 
+    position: relative; /* Position relative for the slide */
+}
+
+.slider-image {
+    max-width: 70%; /* Make sure the image can expand fully */
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.text-overlay {
+    position: absolute; 
+    bottom: 10%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: white; 
+    text-align: center; 
+    background: rgba(0, 0, 0, 0.5); /* Background for better readability */
+    padding: 20px; /* Reduced padding for a more compact look */
+    border-radius: 7px; 
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for overlay */
+}
+
+/* Centered heading style */
+.main-heading {
+    position: absolute; /* Position absolute for the heading */
+    top: 5%; /* Position at the top of the image */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center alignment */
+    font-size: 30px; /* Heading size */
+    color: white; /* White text */
+    z-index: 2; /* Ensure the heading is above the images */
+    background: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    padding: 10px 20px; /* Padding around the heading */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+/* Overlay text styles */
+.text-overlay h2 {
+    font-size: 24px; /* Adjust font size for the title */
+    margin: 0; /* Remove default margin */
+}
+
+.text-overlay p {
+    font-size: 16px; /* Adjust font size for description */
+    margin: 10px 0 0; /* Margin above the paragraph */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .slider-image {
+        max-width: 90%; /* Allow larger image on smaller screens */
+    }
+
+    .text-overlay {
+        padding: 15px; /* Smaller padding for smaller screens */
+    }
+
+    .text-overlay h2 {
+        font-size: 20px; /* Smaller title size for mobile */
+    }
+
+    .text-overlay p {
+        font-size: 14px; /* Smaller description size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-heading {
+        font-size: 28px; 
+        top: 5%;
+    }
+
+    .text-overlay {
+        bottom: 5%; 
+    }
+}
